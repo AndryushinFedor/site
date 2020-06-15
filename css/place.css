@@ -1,0 +1,128 @@
+@import url(main.css);
+.nav3 {
+    color: black;
+text-align: right;}
+.menu a {
+    color: black; 
+    font-size: 1rem;
+}
+#menuOn {
+    display: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+h3 {
+    padding-bottom: 30px;
+}
+
+.menu li {display: inline-block;}
+.mobMenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: calc(((100% - 80px) / 9 - 30px) / 2);
+}
+.main_grid {
+    display: grid;
+    grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr;
+    /*grid-template-rows: ;*/
+    grid-template-areas: 
+        "left0 galleryMain"
+        "mam mamonth"
+        "tig tiger"
+        "dod dodo"
+        "footer footer";
+}
+.left0 {
+    grid-area: left0;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+.galleryMain {
+    grid-area: galleryMain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.mam {
+    grid-area: mam;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+
+.mamonth {
+    padding-top: 150px;
+    grid-area: mamonth;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tig {
+    grid-area: tig;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+.tiger {
+    padding-top: 200px;
+    grid-area: tiger;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.dod {
+    grid-area: dod;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+.dodo {
+    padding-top: 200px;
+    grid-area: dodo;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer {
+    grid-area: footer;
+
+}
+
+.mamonth1, .mamonth2, .mamonth3, .mamonth4, .mamonth5, .mamonth6, .mamonth7, .mamonth8, .mamonth9 {
+    flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
+}
+
+.tiger1, .tiger2, .tiger3, .tiger4, .tiger5, .tiger6, .tiger7, .tiger8, .tiger9 {
+    flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
+}
+
+.dodo1, .dodo2, .dodo3, .dodo4, .dodo5, .dodo6, .dodo7, .dodo8, .dodo9 {
+    flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
+}
+
+/*==================================*/
+@media screen and (max-width: 768px) {
+    .main_grid {
+        grid-template-columns: calc((100% - 80px) / 9 + 10px) 1fr;
+    }
+    
+
+    .mamonth1, .mamonth2, .mamonth3, .mamonth4, .mamonth5, .mamonth6, .mamonth7, .mamonth8, .mamonth9 {
+        flex-basis: calc((100% - 70px) * 6 / 8 + 50px);
+    }
+    h1.dop {
+        display: none;
+    }
+    .mobMenu {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {display: none;}
+    .menu li {display: inline-block;}
+    #menuOn:checked+.menu {
+        display: block;
+    }
+}

@@ -1,0 +1,349 @@
+@import "reset.css";
+
+@font-face {
+    font-family: 'PTMono-Regular';
+    src: url('PTMono-Regular.eot');
+    src: url('PTMono-Regular.eot?#iefix') format('embedded-opentype'),
+         url('PTMono-Regular.svg#PTMono-Regular') format('svg'),
+         url('PTMono-Regular.ttf') format('truetype'),
+         url('PTMono-Regular.woff') format('woff'),
+         url('PTMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url('PTSans-Regular.eot');
+  src: url('PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('PTSans-Regular.svg#PTSans-Regular') format('svg'),
+       url('PTSans-Regular.ttf') format('truetype'),
+       url('PTSans-Regular.woff') format('woff'),
+       url('PTSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+html { font-size: 24px;}
+
+.yel {
+    color:#FFCC48;
+}
+.header {
+    padding-top: 60px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background-color: grey;
+}
+
+.video {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    top: -60px;
+}
+
+.text {
+    z-index: 1;
+    position: relative;
+}
+
+body {
+    font-family: 'PTMono-Regular';
+}
+
+h1 {
+    font-size: 64px;
+    margin-top: calc(50vh - 60px);
+    text-align: center;
+    color: aliceblue;
+}
+h1.dop {
+    font-size: 2rem;
+    color: black;
+    margin-top: 0;
+}
+
+h2.dop {
+    font-size: 1rem;
+    color: black;
+}
+
+h2 {
+    font-size: 2rem;
+    transform: rotate(-90deg) translateX(-30%);
+}
+
+p {
+    font-family: 'PTSans-Regular';
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+    margin: 0 30px ;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 0;
+    color: aliceblue;
+}
+
+footer a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 0.75rem;
+}
+
+footer p {
+    font-size: 0.75rem;
+}
+footer form {
+    border: 1px solid white;
+    width: 100%;
+}
+footer form input {
+    border: none;
+    padding: 5px;
+    width: 80%;
+    background-color: transparent;
+    color: white;
+}
+footer form button {
+    border: none;
+    padding: 5px;
+    width: 15%;
+    background-color: transparent;
+    color: white;
+}
+.item {
+    flex-basis: calc((100% - 110px) / 12 );
+    margin: 20px 5px;
+    box-sizing: border-box;
+}
+.copy {
+    flex-basis: 100%;
+    text-align: center;
+ }
+.subscr {
+    flex-basis: calc((100% - 110px) * 3 / 12 + 20px );
+    font-size: 0.75rem;
+}
+
+.subscr p {
+    font-size: 0.5rem;
+}
+
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr 1fr 1fr;
+    grid-template-areas: 
+    "who bl11 bl11 bl11"
+    "who bl-read bl-see bl-play"
+    "shop good1 good2 good3"
+    "shopDiscount good4 good5 good6"
+    ;
+    margin-right: calc((100% - 110px) /12 + 10px);
+}
+.who {
+    grid-area: who;
+    background-color: #FFCC48;
+    margin-right: 50%;
+}
+
+.who h2 {
+    transform: translateY();
+}
+
+.bl11{
+    grid-area: bl11;
+    padding: 40px 0;
+}
+
+.shop {
+    background-color: #FFCC48;
+    grid-area: shop;
+    margin-right: 50%;
+
+}
+.good-pict {width: 100%;
+    padding-bottom: 20px;
+}
+
+.good1 {
+    grid-area: good1;
+    padding: 40px 20px;
+}
+
+.good2 {
+    grid-area: good2; 
+    padding: 40px 20px;
+}
+
+.good3 {
+    grid-area: good3;  
+    padding: 40px 20px;
+}
+.bl-read {
+    grid-area: bl-read;
+    text-align: center;
+}
+
+.bl-see {
+    grid-area: bl-see;
+    text-align: center;
+}
+
+.bl-play {
+    grid-area: bl-play;
+    text-align: center;
+}
+
+.good4 {
+    grid-area: good4;
+    padding: 40px 20px;
+}
+
+.good5 {
+    grid-area: good5; 
+    padding: 40px 20px;
+}
+
+.good6 {
+    grid-area: good6;  
+    padding: 40px 20px;
+}
+.good1, .good2, .good3, .good4, .good5, .good6 {
+    display: flex;
+    flex-direction: column;
+}
+.price {margin-top: auto;}
+.shopDiscount {
+    grid-area: shopDiscount;  
+    background-color: #FFCC48;
+    margin-right: 50%;
+}
+.but {
+    padding: 10px;
+    font-size: 2rem;
+    border: 3px solid black;
+    margin: 30px 0;
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+}
+
+.but2 {
+    font-size: 1.25rem;
+    border: 3px solid #000000;
+    background-color: white;
+    box-sizing: border-box;
+    width: 182px;
+    height: 52px;
+    border-radius: 12px;
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.choose {
+    font-size: 1.25rem;
+    border: 2px solid #000000;
+    background-color: white;
+    box-sizing: border-box;
+    width: 182px;
+    height: 52px;
+    border-radius: 12px;
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.main-grid h3{
+    font-size: 1.25rem;
+    padding-bottom: 20px;
+}
+
+.main-grid p {
+    font-size: 0.75rem;
+}
+.bl11 p {
+    font-size: 2rem;
+}
+
+.main-grid .price {
+    padding-top: 20px;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 16px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    .main-grid {
+        grid-template-columns: calc((100% - 80px) * 2 / 9 + 20px) 1fr 1fr 1fr;
+        grid-template-areas: 
+        
+        "who bl11 bl11 bl11"
+        "who bl-read bl-see bl-play"
+        "shop good1 good1 good1"
+        "shop good2 good2 good2"
+        "shop good3 good3 good3"
+        "shopDiscount good4 good4 good4"
+        "shopDiscount good5 good5 good5"
+        "shopDiscount good6 good6 good6"
+        ;
+        margin-right: calc((100% - 80px) / 9 + 10px);
+    }
+
+.item  img {width: 15px;
+margin: 0 -1px;}
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+    .main-grid {
+        
+        grid-template-columns: calc((100% - 80px) * 2 / 9 + 10px) 1fr;
+        grid-template-areas: 
+        
+        "who bl11"
+        "who bl-read"
+        "who bl-see "
+        "who bl-play"
+        "shop good1"
+        "shop good2"
+        "shop good3"
+        "shopDiscount good4"
+        "shopDiscount good5"
+        "shopDiscount good6"
+        ;
+        margin-right: 10px;
+    }
+
+    .who, .shop, .shopDiscount {
+        margin-right: 10px;
+    }
+    
+
+}
+
+

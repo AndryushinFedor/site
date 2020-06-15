@@ -1,0 +1,76 @@
+@import url(main.css);
+
+.nav3 {
+    color: black;
+text-align: right;}
+.menu a {
+    color: black; 
+    font-size: 1rem;
+}
+#menuOn {
+    display: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+h3 {
+    padding-bottom: 30px;
+}
+
+.menu li {display: inline-block;}
+.mobMenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: calc(((100% - 80px) / 9 - 30px) / 2);
+}
+.main_grid {
+    display: grid;
+    grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr;
+    /*grid-template-rows: ;*/
+    grid-template-areas: 
+        "left0 galleryMain"
+        "info ticket"
+        "info1 ticketType"
+        "footer footer";
+}
+.left0 {
+    grid-area: left0;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+.galleryMain {
+    grid-area: galleryMain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.info1 {
+    grid-area: info1;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+
+.info2 {
+    grid-area: info2;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+
+.ticket {
+    grid-area: ticket;
+}
+
+.ticketType {
+    grid-area: ticketType;
+}
+.ticketType {
+    display: flex;
+}
+.type {
+    flex-basis: 29%;
+}

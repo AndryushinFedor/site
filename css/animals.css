@@ -1,0 +1,78 @@
+@import url(main.css);
+
+.menu li {display: inline-block;}
+.mobMenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: calc(((100% - 80px) / 9 - 30px) / 2);
+}
+
+.nav3 {
+    color: black;
+text-align: right;}
+.menu a {
+    color: black; 
+    font-size: 1rem;
+}
+#menuOn {
+    display: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+.main_grid {
+    display: grid;
+    grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr;
+    /*grid-template-rows: ;*/
+    grid-template-areas: 
+        "left0 galleryMain"
+        "left0 animals1"
+        "left0 animals2"
+        "footer footer";
+}
+.left0 {
+    grid-area: left0;
+    background-color: #FFCC48;
+    margin-right: 10px;
+}
+
+.galleryMain {
+    grid-area: galleryMain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.animals1 {
+    padding-top: 200px;
+    grid-area: animals1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.animals2 {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    grid-area: animals2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.a1, .a2, .a3 {
+    flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
+}
+
+.a4, .a4, .a6 {
+    flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
+}
+
+footer {
+    grid-area: footer;
+}
+

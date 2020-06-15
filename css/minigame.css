@@ -1,0 +1,80 @@
+@import url(main.css);
+
+.nav3 {
+    color: black;
+text-align: right;}
+.menu a {
+    color: black; 
+    font-size: 1rem;
+}
+#menuOn {
+    display: none;
+}
+.menu li {display: inline-block;}
+.mobMenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: calc(((100% - 80px) / 9 - 30px) / 2);
+}
+.main_grid {
+    display: grid;
+    grid-template-columns: calc((100% - 110px) /12 ) 1fr;
+    /*grid-template-rows: ;*/
+    grid-template-areas: 
+        "left0 galleryMain"
+        "find game"
+        "footer footer";
+}
+.left0 {
+    grid-area: left0;
+    background-color: #FFCC48;
+}
+.find {
+    grid-area: find;
+    background-color: #FFCC48;
+}
+
+.game {
+    grid-area: game;
+    background-image: url(../pictures/mini.jpg);
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.galleryMain {
+    grid-area: galleryMain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.score {
+    position: absolute;
+    color: white;
+    top: 6vw;
+    left: 10vw;
+}
+
+.score h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.levelNum, .scoreNum, .lookNum {
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid white;
+}
+.dodoSymb {
+    position: absolute;
+    width: 90px;
+}
+
+.find h2 {
+    width: 300px;
+} 
