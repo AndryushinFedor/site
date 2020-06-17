@@ -18,6 +18,7 @@ p {
     padding-top: 140px;
 }
 
+/*====================================*/
 .nav3 {
     color: black;
     text-align: right;
@@ -43,6 +44,7 @@ p {
     left: calc(((100% - 80px) / 9 - 30px) / 2);
 }
 
+/*=====================================*/
 .main_grid {
     display: grid;
     grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr;
@@ -238,14 +240,17 @@ footer {
         display: none;
     }
 
+    /*====================================*/
     .mobMenu {
         display: block;
         cursor: pointer;
+        z-index: 10;
     }
 
     .menu {
         display: none;
         position: absolute;
+        left: 100px;
     }
 
     .menu li {

@@ -10,7 +10,8 @@
 <body>
     <div class="header">
         <div class="video">
-            <img src="pictures/hh.png" alt="">
+            <!-- <img src="pictures/hh.png" alt=""> -->
+            <video src="video.mp4" autoplay='autoplay' loop='loop'></video>
         </div>
         <div class="text">
             <nav>
@@ -107,13 +108,15 @@
         <div class="item">
             <img src="pictures/logo.svg" alt="pictures/logo.svg">
         </div>
-        <div class="item">
-            <a href="Выставка">Выставка</a>
-            <a href="Мини-игра">Мини-игра</a>
-            <a href="Билеты">Билеты</a>
-            <a href="Видео">Видео</a>
+        <div class="item f_menu">
+            <ul>
+                <li><a href="Выставка">Выставка</a></li>
+                <li><a href="Мини-игра">Мини-игра</a></li>
+                <li><a href="Билеты">Билеты</a></li>
+                <li><a href="Видео">Видео</a></li>
+            </ul>
         </div>
-        <div class="item">
+        <div class="item  f_menu">
             <ul>
                 <li><a href="Вольеры">Вольеры</a></li>
                 <li><a href="Животные">Животные</a></li>
@@ -127,12 +130,12 @@
                 <input type="email" name="email" placeholder="Ваш e-mail адрес">
                 <button type="submit"><img src="pictures/arrowInp.svg" alt=""></button>
             </form>
-
+            <p>2020 © Парк Вымреших Животных </p>
         </div>
         <div class="item">
-            <img src="pictures/inst.svg" alt="pictures/inst.svg">
-            <img src="pictures/facebook.svg" alt="pictures/facebook.svg">
-            <img src="pictures/vk.svg" alt="pictures/vk.svg">
+            <img class="social" src="pictures/inst.svg" alt="pictures/inst.svg">
+            <img class="social" src="pictures/facebook.svg" alt="pictures/facebook.svg">
+            <img class="social" src="pictures/vk.svg" alt="pictures/vk.svg">
         </div>
         <div class="item">
             <h4 class="adress">Парк</h4>
@@ -144,7 +147,7 @@
     </footer>
 
     <div class="alert">
-        <img src=pictures/thanks.jpg" alt="">
+        <img src='pictures/thanks.jpg' alt="">
     </div>
     <script src="js/main.js"></script>
 </body>

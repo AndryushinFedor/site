@@ -44,8 +44,19 @@ html {
 .video {
     position: absolute;
     width: 100%;
+    height: 100vh;
     z-index: 0;
-    top: -60px;
+    top: 0;
+    left: 0;
+}
+
+@supports (object-fit:cover) {
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 110vh;
+
+    }
 }
 
 .text {
@@ -59,7 +70,7 @@ body {
 
 h1 {
     font-size: 64px;
-    margin-top: calc(50vh - 60px);
+    margin-top: 30vh;
     text-align: center;
     color: aliceblue;
 }
@@ -148,6 +159,7 @@ footer form button {
 }
 
 .copy {
+    display: none;
     flex-basis: 100%;
     text-align: center;
 }
@@ -159,13 +171,14 @@ footer form button {
 
 .subscr p {
     font-size: 0.5rem;
+    text-align: center;
 }
 
 
 
 .main-grid {
     display: grid;
-    grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr 1fr 1fr;
+    grid-template-columns: calc((100% - 110px) * 2 /12 + 10px) 1fr 1fr 1fr;
     grid-template-areas:
         "who bl11 bl11 bl11"
         "who bl-read bl-see bl-play"
@@ -257,9 +270,7 @@ footer form button {
     flex-direction: column;
 }
 
-.good4,
-.good5,
-.good6 .price {
+.price {
     margin-top: auto;
 }
 
@@ -269,11 +280,9 @@ footer form button {
     margin-right: 50%;
 }
 
-.price {
-    color: red;
-}
-
-.shopDiscount .price {
+.good4 .price,
+.good5 .price,
+.good6 .price {
     color: red;
 }
 
@@ -355,9 +364,16 @@ footer form button {
 
 }
 
+@media screen and (max-width: 1280px) {
+    .social {
+        width: 15px;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .main-grid {
@@ -365,7 +381,9 @@ footer form button {
         grid-template-areas:
 
             "who bl11 bl11 bl11"
-            "who bl-read bl-see bl-play"
+            "who bl-read bl-read bl-read"
+            "who bl-see bl-see bl-see"
+            "who bl-play bl-play bl-play"
             "shop good1 good1 good1"
             "shop good2 good2 good2"
             "shop good3 good3 good3"
@@ -396,6 +414,11 @@ footer form button {
     .item:first-child {
         display: none;
     }
+
+    .alert {
+        width: 70%;
+        left: 20%;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -422,6 +445,10 @@ footer form button {
         margin-right: 10px;
     }
 
+    nav a {
+        margin: 0 15px;
+    }
+
     .who,
     .shop,
     .shopDiscount {
@@ -441,6 +468,18 @@ footer form button {
         width: 20%;
     }
 
+    .item.f_menu {
+        display: none;
+    }
+
+    .item.subscr p {
+        display: none;
+    }
+
+    .copy {
+        display: block;
+    }
+
     .it {
         display: none;
     }
@@ -455,5 +494,7 @@ footer form button {
         flex-basis: calc((100% - 80px) * 4 / 9 + 30px);
         text-align: right;
     }
+
+
 
 }

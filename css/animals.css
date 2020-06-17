@@ -11,18 +11,23 @@
     left: calc(((100% - 80px) / 9 - 30px) / 2);
 }
 
+.dop {
+    flex-basis: calc((100% - 100px) * 5 / 11 + 40px);
+    text-align: left;
+    font-size: 0.75rem;
+    margin: 0 10px;
+}
+
 .nav3 {
     color: black;
     text-align: right;
-}
-
-h1.dop {
-    text-align: left;
+    flex-basis: calc((100% - 100px) * 4 / 11 + 30px);
 }
 
 .menu a {
     color: black;
     font-size: 1rem;
+    margin: 0 5px;
 }
 
 #menuOn {
@@ -58,42 +63,91 @@ p {
     margin: 20px 0;
 }
 
-.nav3,
-.dop {
-    flex-basis: calc((100% - 100px) * 4 /11 + 30px);
-    margin: 0 10px;
-}
-
-.animals1 {
-    padding-top: 200px;
-    grid-area: animals1;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.animals2 {
-    padding-top: 200px;
-    padding-bottom: 100px;
+.animals {
     grid-area: animals2;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.a1,
-.a2,
-.a3 {
+.animals>div {
+    display: flex;
+    flex-direction: column;
     flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
     margin: 0 10px;
+    padding-top: 200px;
 }
 
-.a4,
-.a4,
-.a6 {
-    flex-basis: calc((100% - 100px) * 3 / 11 + 20px);
+.animals>div>img {
+    width: 100%;
+}
+
+.butts {
+    margin-top: auto;
+    text-align: center;
+}
+
+.prev,
+.next {
+    padding: 20px 15%;
+    display: inline-block;
 }
 
 footer {
     grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+    .main_grid {
+        grid-template-columns: calc((100% - 80px) / 9 + 10px) 1fr;
+    }
+
+
+    .animals>div {
+        flex-basis: calc((100% - 70px) * 6 / 8 + 50px);
+    }
+
+    h1.dop {
+        display: none;
+    }
+
+
+    .nav3 {
+        color: black;
+        text-align: right;
+    }
+
+    .menu a {
+        color: black;
+        font-size: 1rem;
+    }
+
+    #menuOn {
+        display: none;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .mobMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: calc(((100% - 80px) / 9 - 30px) / 2);
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        left: 100px;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    #menuOn:checked+.menu {
+        display: block;
+    }
 }

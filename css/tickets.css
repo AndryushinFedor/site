@@ -4,9 +4,13 @@
     color: black;
     text-align: right;
     margin: 0 10px;
+    flex-basis: calc((100% - 100px) * 4 / 11 + 30px);
 }
 
 .dop {
+    flex-basis: calc((100% - 100px) * 5 / 11 + 40px);
+    text-align: left;
+    font-size: 0.75rem;
     margin: 0 10px;
 }
 
@@ -27,6 +31,10 @@ h3 {
     padding-bottom: 30px;
 }
 
+.menu a {
+    margin: 0 5px;
+}
+
 .menu li {
     display: inline-block;
 }
@@ -41,7 +49,8 @@ h3 {
 .main_grid {
     display: grid;
     grid-template-columns: calc((100% - 110px) /12 + 10px) 1fr;
-    /*grid-template-rows: ;*/
+    /*grid-template-rows: 0.5fr 1fr 1fr 200px;*/
+
     grid-template-areas:
         "left0 galleryMain"
         "info1 ticket"
@@ -58,7 +67,7 @@ h3 {
 .galleryMain {
     grid-area: galleryMain;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin: 20px 0;
 }
@@ -82,12 +91,19 @@ h3 {
 .ticketType {
     grid-area: ticketType;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .type {
     flex-basis: calc((100% - 100px) * 3 /11 + 20px);
     margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.choose {
+    margin-top: auto;
 }
 
 footer {
@@ -97,6 +113,7 @@ footer {
 .ticket {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .item_t {
@@ -119,4 +136,68 @@ footer {
 
 .but2 {
     margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .main_grid {
+        grid-template-columns: calc((100% - 80px) / 9 + 10px) 1fr;
+    }
+
+
+    .item_t,
+    .type {
+        flex-basis: calc((100% - 70px) * 6 / 8 + 50px);
+    }
+
+    .item_t:last-child {
+        max-width: 100%;
+    }
+
+    .choose {
+        margin: 0 auto;
+    }
+
+    h1.dop {
+        display: none;
+    }
+
+
+    .nav3 {
+        color: black;
+        text-align: right;
+    }
+
+    .menu a {
+        color: black;
+        font-size: 1rem;
+    }
+
+    #menuOn {
+        display: none;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .mobMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: calc(((100% - 80px) / 9 - 30px) / 2);
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        left: 100px;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    #menuOn:checked+.menu {
+        display: block;
+    }
 }
