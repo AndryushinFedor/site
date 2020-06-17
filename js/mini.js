@@ -8,17 +8,29 @@ window.onload = function () {
 
     let level_n = 3;
     let score_n = 0;
-    let look_n =0;
-    const dodo_n = 30;
-    let coun_dodo =0;
+    let look_n = 0;
+    const dodo_n = 10;
+    let count_dodo = 0;
+    let born_dodo = 0;
 
     level.innerHTML = level_n;
+
     start.onclick = function () {
+        let olds = game.querySelectorAll('img');
+        for (let old of olds) {
+            old.parentElement.removeChild(old);
+        }
         for (let i=0; i <level_n; i++) {
              game.appendChild( new dodo_gen());
         }
         count_dodo = level_n;
-        game_go = window.setInterval(timer, 100);
+        born_dodo = level_n;
+        score = 0;
+        look_n = 0;
+        res.innerHTML =  born_dodo +'  ' + count_dodo +'  '+ dodo_n;
+        score.innerHTML = score_n;
+        look.innerHTML = look_n + '/' + dodo_n;
+        game_go = window.setInterval(timer, 1000);
     }
 
     function getRandomInt(x){
@@ -26,6 +38,9 @@ window.onload = function () {
     } 
     function timer() {
         console.log('timer');
+        console.log(score_n);
+        res.innerHTML =  born_dodo +'  ' + count_dodo +'  '+ dodo_n + '  ' + score_n;
+        score.innerHTML = score_n;
         let dodos = document.querySelectorAll('.dodoSymb');
         let maxY = parseInt(window.getComputedStyle(game).height) - 100;
         let maxX = parseInt(window.getComputedStyle(game).width) - 100;
@@ -37,17 +52,18 @@ window.onload = function () {
             else {sign = 1;}*/
             dodo.style.top = parseInt(dodo.style.top) + sign * deltaY + "px";
             dodo.style.left = parseInt(dodo.style.left) + sign * deltaX + "px";
-            if ((parseInt(dodo.style.top) < maxY) && (parseInt(dodo.style.left) < maxX)) {
-
-            }
-            else {
+            if ((parseInt(dodo.style.top) > maxY) || (parseInt(dodo.style.left) > maxX)
+            || (parseInt(dodo.style.top) < 0) || (parseInt(dodo.style.left) < 0)) {
                 dodo.parentElement.removeChild(dodo);
                 for (let i=0; i <level_n; i++) {
                     game.appendChild( new dodo_gen());
                }
-               count_dodo += level_n;
-               if(count_dodo > dodo_n) {
-                   res.innerHTML = "fall...";
+               score_n--;
+               born_dodo += level_n;
+               count_dodo += level_n -1 ;
+               if ((count_dodo > dodo_n) || (born_dodo > dodo_n)) {
+                   res.innerHTML =  born_dodo +'  ' + count_dodo +'  '+ dodo_n + "fall...";
+                   console.log('fall==========================');
                    clearInterval(game_go);
                }
             }
@@ -66,11 +82,19 @@ window.onload = function () {
             score_n++;
             look_n++;
             count_dodo--;
-            if (count_dodo == 0) {
-                clearInterval(game.go);
-                res.innerHTML = 'victory!!!!';
+            if (born_dodo < dodo_n) {
+                game.appendChild( new dodo_gen());
+                born_dodo++;
+                count_dodo++;
+                res.innerHTML = born_dodo +'  ' + count_dodo +'  '+ dodo_n;
+            }
+            if ((count_dodo == 0) && (born_dodo == dodo_n)) {
+                clearInterval(game_go);
+                console.log('stop=========================================');
+                res.innerHTML =  born_dodo +'  ' + count_dodo +'  '+ dodo_n +' victory!!!!';
             }
             score.innerHTML = score_n;
+            console.log(score_n);
             look.innerHTML = look_n + '/' + dodo_n;
         });
 

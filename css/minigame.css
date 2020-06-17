@@ -2,34 +2,44 @@
 
 .nav3 {
     color: black;
-text-align: right;}
+    text-align: right;
+}
+
 .menu a {
-    color: black; 
+    color: black;
     font-size: 1rem;
 }
+
 #menuOn {
     display: none;
 }
-.menu li {display: inline-block;}
+
+.menu li {
+    display: inline-block;
+}
+
 .mobMenu {
     display: none;
     position: absolute;
     top: 20px;
     left: calc(((100% - 80px) / 9 - 30px) / 2);
 }
+
 .main_grid {
     display: grid;
-    grid-template-columns: calc((100% - 110px) /12 ) 1fr;
+    grid-template-columns: calc((100% - 110px) /12) 1fr;
     /*grid-template-rows: ;*/
-    grid-template-areas: 
+    grid-template-areas:
         "left0 galleryMain"
         "find game"
         "footer footer";
 }
+
 .left0 {
     grid-area: left0;
     background-color: #FFCC48;
 }
+
 .find {
     grid-area: find;
     background-color: #FFCC48;
@@ -40,6 +50,7 @@ text-align: right;}
     background-image: url(../pictures/mini.jpg);
     background-size: cover;
     height: calc(100vh - 80px);
+    cursor: url("../pictures/cursor.svg"), pointer
 }
 
 .galleryMain {
@@ -65,11 +76,15 @@ footer {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.levelNum, .scoreNum, .lookNum {
+
+.levelNum,
+.scoreNum,
+.lookNum {
     padding: 5px;
     margin: 10px 0;
     border: 2px solid white;
 }
+
 .dodoSymb {
     position: absolute;
     width: 90px;
@@ -77,4 +92,45 @@ footer {
 
 .find h2 {
     width: 300px;
-} 
+    transform: rotate(-90deg) translateX(-40%) translateY(-160%);
+}
+
+@media screen and (max-width: 1660px) {
+
+    .find h2 {
+        transform: rotate(-90deg) translateX(-40%) translateY(-180%);
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+
+    .find h2 {
+        transform: rotate(-90deg) translateX(-10%) translateY(-290%);
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .find h2 {
+        transform: rotate(-90deg) translateX(-10%) translateY(-350%);
+    }
+
+    .score {
+        padding-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .find h2 {
+        transform: rotate(-90deg) translateX(0%) translateY(-500%);
+    }
+
+    .score {
+        padding-top: 50px;
+    }
+
+}
