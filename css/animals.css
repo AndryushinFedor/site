@@ -58,7 +58,7 @@ p {
 .galleryMain {
     grid-area: galleryMain;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin: 20px 0;
 }
@@ -95,6 +95,45 @@ p {
 
 footer {
     grid-area: footer;
+}
+
+h3 {
+    padding-bottom: 30px;
+}
+
+p {
+    padding-bottom: 40px;
+}
+
+h2 {
+    transform: rotate(-90deg) translateX(-272%);
+}
+
+.animals {
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1660px) {
+    h2 {
+        transform: rotate(-90deg) translateX(-332%);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    h2 {
+        transform: rotate(-90deg) translateX(-390%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h2 {
+        transform: rotate(-90deg) translateX(-490%);
+    }
+
+    .nav3 {
+        position: absolute;
+        padding-top: 100px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -134,5 +173,34 @@ footer {
         padding-left: 25px;
     }
 
+    h2 {
+        font-size: 30px;
+        transform: rotate(-90deg) translateX(-440%);
+    }
 
+
+}
+
+@media screen and (max-width: 375px) {
+    h2 {
+        transform: rotate(-90deg) translateX(-620%);
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .nav3 {
+        position: absolute;
+        padding-top: 100px;
+    }
+
+    .animals>div {
+        padding-top: 100px;
+    }
 }
