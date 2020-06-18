@@ -3,19 +3,19 @@ window.onload = function () {
     let nexts = this.document.querySelectorAll(".next");
     let set_plaks = new Array(
         new Array(
-            "/pictures/1.png",
-            "/pictures/m2.png",
-            "/pictures/m3.png",
+            "./pictures/1.png",
+            "./pictures/m2.png",
+            "./pictures/m3.png",
         ),
         new Array(
-            "/pictures/2.png",
-            "/pictures/t2.png",
-            "/pictures/t3.png",
+            "./pictures/2.png",
+            "./pictures/t2.png",
+            "./pictures/t3.png",
         ),
         new Array(
-            "/pictures/3.png",
-            "/pictures/d2.png",
-            "/pictures/d3.png",
+            "./pictures/3.png",
+            "./pictures/d2.png",
+            "./pictures/d3.png",
         ),
         new Array(
             "./pictures/4.png",
@@ -23,9 +23,9 @@ window.onload = function () {
             "./pictures/r3.png",
         ),
         new Array(
-            "../pictures/5.png",
-            "../pictures/k2.png",
-            "../pictures/k3.png",
+            "./pictures/5.png",
+            "./pictures/k2.png",
+            "./pictures/k3.png",
         ),
     );
 
