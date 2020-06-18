@@ -316,6 +316,10 @@ a:hover {
     color: black;
 }
 
+.but:hover {
+    background-color: white;
+}
+
 .but2 {
     font-size: 1.25rem;
     border: 3px solid #000000;
