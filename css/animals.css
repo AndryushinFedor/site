@@ -158,8 +158,8 @@ h2 {
     }
 
     .menu a {
-        color: black;
-        font-size: 1rem;
+        font-size: 20px;
+        padding-right: 26px;
     }
 
 
@@ -196,9 +196,17 @@ h2 {
         font-size: 14px;
     }
 
-    .nav3 {
-        position: absolute;
-        padding-top: 100px;
+    ul {
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 0;
     }
 
     .animals>div {

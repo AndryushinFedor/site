@@ -150,6 +150,19 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    ul {
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 20px;
+        padding-right: 26px;
+    }
+
     .left0>div,
     .find>div {
         flex-basis: calc((100% - 70px) * 6 / 8 + 50px);
@@ -168,8 +181,18 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
-    .nav3 {
-        text-align: center;
+
+    ul {
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 0;
     }
 
     h2 {

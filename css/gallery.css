@@ -266,11 +266,19 @@ footer {
         grid-template-columns: calc((100% - 80px) / 9 + 10px) 1fr;
     }
 
-    .nav3 {
-        position: absolute;
-        padding-top: 100px;
-
+    ul {
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
     }
+
+    .menu a {
+        font-size: 20px;
+        padding-right: 26px;
+    }
+
 
     h2 {
         font-size: 1.5rem;
@@ -349,10 +357,19 @@ footer {
         padding-top: 80px;
     }
 
-    .nav3 {
-        position: absolute;
-        right: 10%;
 
+
+    ul {
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 0;
     }
 
 }
