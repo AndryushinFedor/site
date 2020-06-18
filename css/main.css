@@ -5,9 +5,9 @@
     src: url('PTMono-Regular.eot');
     src: url('PTMono-Regular.eot?#iefix') format('embedded-opentype'),
         url('PTMono-Regular.svg#PTMono-Regular') format('svg'),
-        url('PTMono-Regular.ttf') format('truetype'),
-        url('PTMono-Regular.woff') format('woff'),
-        url('PTMono-Regular.woff2') format('woff2');
+        url('./fonts/PTMono-Regular.ttf') format('truetype'),
+        url('../fonts/PTMono-Regular.woff') format('woff'),
+        url('./fonts/PTMono-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,9 +17,9 @@
     src: url('PTSans-Regular.eot');
     src: url('PTSans-Regular.eot?#iefix') format('embedded-opentype'),
         url('PTSans-Regular.svg#PTSans-Regular') format('svg'),
-        url('PTSans-Regular.ttf') format('truetype'),
-        url('PTSans-Regular.woff') format('woff'),
-        url('PTSans-Regular.woff2') format('woff2');
+        url('./fonts/PTSans-Regular.ttf') format('truetype'),
+        url('../fonts/PTSans-Regular.woff') format('woff'),
+        url('./fonts/PTSans-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -348,6 +348,8 @@ a:hover {
 
 .alert img {
     width: 100%;
+    cursor: pointer;
+
 }
 
 .choose {
