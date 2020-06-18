@@ -16,7 +16,7 @@ window.onload = function () {
       "./pictures/s21.jpg",
       "./pictures/s22.jpg"
     ),
-    new Array("../pictures/Plakat3.jpg", "../pictures/s31.jpg"),
+    new Array("./pictures/Plakat3.jpg", "./pictures/s31.jpg"),
     new Array(
       "./pictures/Plakat4.jpg",
       "./pictures/s41.jpg",
