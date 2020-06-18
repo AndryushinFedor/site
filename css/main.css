@@ -179,6 +179,16 @@ footer form button {
     text-align: center;
 }
 
+nav a {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #FFCC48;
+    transition: 0.5s linear;
+
+}
 
 
 .main-grid {
@@ -320,6 +330,7 @@ footer form button {
 
 .but2:hover {
     background-color: #FFCC48;
+    transition: 0.5s linear;
 }
 
 .alert {
@@ -503,6 +514,10 @@ footer form button {
         font-size: 18px;
     }
 
+    h1 {
+        font-size: 40px;
+    }
+
     h2 {
         font-size: 1rem;
         transform: rotate(-90deg) translateX(-120%);
@@ -537,6 +552,12 @@ footer form button {
 
     nav a {
         margin: 0 15px;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: #FFCC48;
+
     }
 
     .who,

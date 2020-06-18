@@ -122,6 +122,14 @@ footer {
         transform: rotate(-90deg) translateX(-20%) translateY(-280%);
     }
 
+    .score {
+        width: 100px;
+    }
+
+    .start {
+        width: 100px;
+    }
+
 }
 
 @media screen and (max-width: 1024px) {

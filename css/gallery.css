@@ -188,6 +188,7 @@ footer {
 
 .butts {
     text-align: center;
+    cursor: pointer;
 }
 
 .prev,
