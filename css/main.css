@@ -88,7 +88,7 @@ h2.dop {
 
 h2 {
     font-size: 2rem;
-    transform: rotate(-90deg) translateX(-30%);
+    transform: rotate(-90deg) translateX(-100%);
 }
 
 p {
@@ -153,7 +153,7 @@ footer form button {
     box-sizing: border-box;
 }
 
-.adr p {
+.adressS {
     padding-top: 14px;
     color: #ababab;
 }
@@ -171,6 +171,11 @@ footer form button {
 
 .subscr p {
     font-size: 0.5rem;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.Ssocial {
     text-align: center;
 }
 
@@ -270,6 +275,7 @@ footer form button {
     flex-direction: column;
 }
 
+
 .price {
     margin-top: auto;
 }
@@ -287,12 +293,16 @@ footer form button {
 }
 
 .but {
-    padding: 10px;
-    font-size: 2rem;
+    padding-top: 20px;
+    width: 300px;
+    height: 60px;
+    font-size: 1.5rem;
     border: 3px solid black;
     margin: 30px 0;
+    border-radius: 12px;
     display: inline-block;
     text-decoration: none;
+    background-color: #FFCC48;
     color: black;
 }
 
@@ -355,10 +365,38 @@ footer form button {
 }
 
 
+@media screen and (max-width: 1660px) {
+    h2 {
+        transform: rotate(-90deg) translateX(-130%);
+    }
+}
+
 
 @media screen and (max-width: 1440px) {
     html {
-        font-size: 16px;
+        font-size: 18px;
+    }
+
+    h2 {
+        transform: rotate(-90deg) translateX(-100%);
+    }
+
+    .but {
+        padding-top: 20px;
+        width: 250px;
+        height: 45px;
+    }
+
+    .but2 {
+        margin: 0;
+        font-size: 1rem;
+        width: 150px;
+        height: 44px;
+        border: 2px solid black;
+    }
+
+    .social {
+        width: 25px;
     }
 
 
@@ -371,9 +409,28 @@ footer form button {
 
 }
 
+@media screen and (max-width: 1024px) {
+    h2 {
+        transform: rotate(-90deg) translateX(-180%);
+    }
+
+    h1.dop {
+        display: none;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 24px;
+    }
+
+    .bl11 p {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        transform: rotate(-90deg) translateX(-230%);
     }
 
     .main-grid {
@@ -419,11 +476,44 @@ footer form button {
         width: 70%;
         left: 20%;
     }
+
+    .but {
+        padding: 18px;
+    }
+
+    .but2 {
+        margin: 0 auto;
+        font-size: 1rem;
+        width: 180px;
+        height: 50px;
+    }
+
+    .good4 {
+        padding-top: 70px;
+    }
+
+    .social {
+        width: 17px;
+    }
+
 }
 
 @media screen and (max-width: 375px) {
     html {
-        font-size: 10px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 1rem;
+        transform: rotate(-90deg) translateX(-120%);
+    }
+
+    .hh {
+        display: none;
+    }
+
+    .bl11 p {
+        font-size: 1.25rem;
     }
 
     .main-grid {
@@ -493,6 +583,32 @@ footer form button {
     .adr {
         flex-basis: calc((100% - 80px) * 4 / 9 + 30px);
         text-align: right;
+
+    }
+
+    .but {
+        width: 150px;
+        height: 20px;
+        padding-top: 10px;
+    }
+
+    .Ssocial {
+        text-align: left;
+        margin-left: -30px;
+    }
+
+    .item img {
+        width: 25px;
+    }
+
+    .adressS {
+        text-align: right;
+        margin-right: -37px;
+    }
+
+    .adress {
+        text-align: right;
+        margin-right: -37px;
     }
 
 

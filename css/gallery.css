@@ -6,6 +6,7 @@ p {
 
 h3 {
     padding-bottom: 24px;
+    font-size: 30px;
 }
 
 p {
@@ -44,6 +45,7 @@ p {
     left: calc(((100% - 80px) / 9 - 30px) / 2);
 }
 
+
 /*=====================================*/
 .main_grid {
     display: grid;
@@ -79,7 +81,7 @@ p {
 }
 
 .exhib h2 {
-    transform: rotate(-90deg) translateY(-80%);
+    transform: rotate(-90deg) translateX(-84%);
 }
 
 .exhibition {
@@ -90,6 +92,10 @@ p {
     grid-area: post;
     background-color: #FFCC48;
     margin-right: 10px;
+}
+
+.post h2 {
+    transform: rotate(-90deg) translateX(-240%);
 }
 
 .posters {
@@ -203,13 +209,78 @@ footer {
 
 .web h2 {
     width: 340px;
-    transform: rotate(-90deg) translateX(-30%) translateY(-70px);
+    transform: rotate(-90deg) translateX(-96%) translateY(-200%);
+}
+
+@media screen and (max-width: 1660px) {
+    .exhib h2 {
+        transform: rotate(-90deg) translateX(-110%);
+    }
+
+    .post h2 {
+        transform: rotate(-90deg) translateX(-290%);
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .web h2 {
+        transform: rotate(-90deg) translateX(-70%) translateY(-320%);
+    }
+
+    .exhib h2 {
+        transform: rotate(-90deg) translateX(-80%);
+    }
+
+    .post h2 {
+        transform: rotate(-90deg) translateX(-320%);
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .web h2 {
+        transform: rotate(-90deg) translateX(-74%) translateY(-320%);
+    }
+
+    .exhib h2 {
+        transform: rotate(-90deg) translateX(-110%);
+    }
+
+    .post h2 {
+        transform: rotate(-90deg) translateX(-380%);
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .web h2 {
+        transform: rotate(-90deg) translateX(-74%) translateY(-370%);
+    }
+
 }
 
 /*==================================*/
 @media screen and (max-width: 768px) {
     .main_grid {
         grid-template-columns: calc((100% - 80px) / 9 + 10px) 1fr;
+    }
+
+    .nav3 {
+        position: absolute;
+        padding-top: 100px;
+
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .item1 {
+        padding-top: 50px;
+    }
+
+    h3 {
+        padding-top: 80px;
     }
 
     .left0,
@@ -240,26 +311,47 @@ footer {
         display: none;
     }
 
-    /*====================================*/
-    .mobMenu {
-        display: block;
-        cursor: pointer;
-        z-index: 10;
+    .web h2 {
+        transform: rotate(-90deg) translateX(-54%) translateY(-360%);
     }
 
-    .menu {
-        display: none;
+    .exhib h2 {
+        transform: rotate(-90deg) translateX(-130%);
+    }
+
+    .post h2 {
+        transform: rotate(-90deg) translateX(-360%);
+    }
+
+
+}
+
+@media screen and (max-width: 375px) {
+    .web h2 {
+        transform: rotate(-90deg) translateX(-22%) translateY(-830%);
+    }
+
+    .post h2 {
+        transform: rotate(-90deg) translateX(-804%);
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 18px;
+        padding-top: 80px;
+    }
+
+    .nav3 {
         position: absolute;
-        left: 100px;
-    }
+        right: 10%;
 
-    .menu li {
-        display: inline-block;
     }
-
-    #menuOn:checked+.menu {
-        display: block;
-    }
-
 
 }

@@ -138,9 +138,59 @@ footer {
     margin-top: auto;
 }
 
+.ticket {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.ticketType {
+    padding-bottom: 150px;
+}
+
+.price {
+    padding-top: 20px;
+}
+
+.info2 h2 {
+    transform: rotate(-90deg) translateX(12%);
+}
+
+@media screen and (max-width: 1280px) {
+    .info1 h2 {
+        transform: rotate(-90deg) translateX(-132%);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .nav3 {
+        position: absolute;
+        padding-top: 100px;
+    }
+
+    .ticket {
+        padding-top: 200px;
+    }
+
+    .ticketType {
+        padding-top: 100px;
+    }
+
+    .info1 h2 {
+        transform: rotate(-90deg) translateX(-322%);
+    }
+
+    .info2 h2 {
+        transform: rotate(-90deg) translateX(-132%);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .main_grid {
         grid-template-columns: calc((100% - 80px) / 9 + 10px) 1fr;
+    }
+
+    h2 {
+        font-size: 30px;
     }
 
 
@@ -153,8 +203,20 @@ footer {
         max-width: 100%;
     }
 
+    .ticket {
+        padding-top: 170px;
+    }
+
+    .item_t p {
+        padding-bottom: 30px;
+    }
+
     .choose {
         margin: 0 auto;
+    }
+
+    .ticketType h3 {
+        padding-top: 80px;
     }
 
     h1.dop {
@@ -172,32 +234,45 @@ footer {
         font-size: 1rem;
     }
 
-    #menuOn {
-        display: none;
+}
+
+@media screen and (max-width: 375px) {
+
+
+    h2 {
+        font-size: 18px;
     }
 
-    .menu li {
-        display: inline-block;
+    h3 {
+        font-size: 18px;
     }
 
-    .mobMenu {
-        display: block;
-        position: absolute;
-        top: 20px;
-        left: calc(((100% - 80px) / 9 - 30px) / 2);
+    p {
+        font-size: 14px;
     }
 
-    .menu {
-        display: none;
-        position: absolute;
-        left: 100px;
+    .item_t img {
+        padding-top: 50px;
     }
 
-    .menu li {
-        display: inline-block;
+    .ticket {
+        padding-bottom: 0;
     }
 
-    #menuOn:checked+.menu {
-        display: block;
+    .price {
+        padding-top: 10px;
     }
+
+    .ticketType h3 {
+        padding-top: 40px;
+    }
+
+    .info1 h2 {
+        transform: rotate(-90deg) translateX(-592%);
+    }
+
+    .info2 h2 {
+        transform: rotate(-90deg) translateX(-432%);
+    }
+
 }
