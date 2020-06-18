@@ -3,34 +3,34 @@ window.onload = function () {
   let nexts = this.document.querySelectorAll(".next");
   let set_plaks = new Array(
     new Array(
-      "../pictures/Plakat1.jpg",
-      "../pictures/s11.jpg",
-      "../pictures/s12.jpg",
-      "../pictures/s13.jpg",
-      "../pictures/s14.jpg",
-      "../pictures/s15.jpg",
-      "../pictures/s16.jpg"
+      "./pictures/Plakat1.jpg",
+      "./pictures/s11.jpg",
+      "./pictures/s12.jpg",
+      "./pictures/s13.jpg",
+      "./pictures/s14.jpg",
+      "./pictures/s15.jpg",
+      "./pictures/s16.jpg"
     ),
     new Array(
-      "../pictures/Plakat2.jpg",
-      "../pictures/s21.jpg",
-      "../pictures/s22.jpg"
+      "./pictures/Plakat2.jpg",
+      "./pictures/s21.jpg",
+      "./pictures/s22.jpg"
     ),
     new Array("../pictures/Plakat3.jpg", "../pictures/s31.jpg"),
     new Array(
-      "../pictures/Plakat4.jpg",
-      "../pictures/s41.jpg",
-      "../pictures/s42.jpg"
+      "./pictures/Plakat4.jpg",
+      "./pictures/s41.jpg",
+      "./pictures/s42.jpg"
     ),
     new Array(
-      "../pictures/Plakat5.jpg",
-      "../pictures/s51.jpg",
-      "../pictures/s52.jpg"
+      "./pictures/Plakat5.jpg",
+      "./pictures/s51.jpg",
+      "./pictures/s52.jpg"
     ),
     new Array(
-      "../pictures/Plakat6.jpg",
-      "../pictures/s61.jpg",
-      "../pictures/s62.jpg"
+      "./pictures/Plakat6.jpg",
+      "./pictures/s61.jpg",
+      "./pictures/s62.jpg"
     )
   );
 
