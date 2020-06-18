@@ -73,7 +73,7 @@ window.onload = function () {
 
     function dodo_gen() {
         let newdodo = document.createElement('img');
-        newdodo.src = '../pictures/dodo/d' + Math.round(Math.random() * 14 + 1) + '.png';
+        newdodo.src = './pictures/dodo/d' + Math.round(Math.random() * 14 + 1) + '.png';
         newdodo.style.top = 100 + Math.random() * (document.documentElement.clientHeight - 470) + 'px';
         newdodo.style.left = 150 + Math.random() * (document.documentElement.clientWidth - 220) + 'px';
         newdodo.classList.add('dodoSymb');
@@ -92,7 +92,7 @@ window.onload = function () {
             if ((count_dodo == 0) && (born_dodo == dodo_n)) {
                 clearInterval(game_go);
                 console.log('stop=========================================');
-                res.innerHTML = ' victory!!!!';
+                res.innerHTML = ' victory!!!';
             }
             score_res.innerHTML = score_n;
             console.log(score_n);
