@@ -2,9 +2,9 @@
 
 @font-face {
     font-family: 'PTMono-Regular';
-    src: url('PTMono-Regular.eot');
-    src: url('PTMono-Regular.eot?#iefix') format('embedded-opentype'),
-        url('PTMono-Regular.svg#PTMono-Regular') format('svg'),
+    src: url('../fonts/PTMono-Regular.eot');
+    src: url('../fonts/PTMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTMono-Regular.svg#PTMono-Regular') format('svg'),
         url('./fonts/PTMono-Regular.ttf') format('truetype'),
         url('../fonts/PTMono-Regular.woff') format('woff'),
         url('./fonts/PTMono-Regular.woff2') format('woff2');
